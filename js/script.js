@@ -26,6 +26,7 @@ for (let i=0; i<2; i++){
     const a = prompt('The last film you watched', ''),
           b = prompt('How would you rate it?', '');
     if (a == '' || b == '' || a.length > 50 || a == null || b == null){
+        console.log('error');
        i--;
     } else {
        personalMovieDB.movies[a] = b;
