@@ -28,6 +28,20 @@ const personalMovieDB = {
             console.log(`Favorite genre #${i+1} - is ${item}`);
         });
     },
+    writeYourGenresAlt: function() {
+        for (let i = 1; i<2; i++) {
+            let genre = prompt(`You favorite genres number comma separated`, '');  
+            if (genre == null || genre == ''){
+                i--;
+            }
+            else {
+                personalMovieDB.genres = genre.split(', ');
+            }
+        } 
+        personalMovieDB.genres.forEach( (item, i) => {
+            console.log(`Favorite genre #${i+1} - is ${item}`);
+        });
+    },
     forEach: function() {
       for (let i = 0; i < personalMovieDB.genres.length; i++) {
          console.log(`Favorite genre #${i+1} - is ${personalMovieDB.genres[i]}`);
